@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  ia-sign-language:
+    build: .
+    container_name: sign_language_gpu
+    volumes:
+      - .:/app
+    # Aquí es donde ocurre la magia para la RTX A5000
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
+    environment:
+      - TF_CPP_MIN_LOG_LEVEL=2
+    # Mantener el contenedor abierto si falla para revisar logs
+    stdin_open: true
+    tty: true

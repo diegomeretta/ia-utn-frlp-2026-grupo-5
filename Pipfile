@@ -1,0 +1,23 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+pandas = "*"
+numpy = "*"
+scikit-learn = "*"
+tensorflow = "*"
+nvidia-cudnn-cu12 = "*"
+nvidia-cublas-cu12 = "*"
+nvidia-cuda-runtime-cu12 = "*"
+nvidia-curand-cu12 = "*"
+nvidia-cusolver-cu12 = "*"
+nvidia-cusparse-cu12 = "*"
+nvidia-cuda-nvcc-cu12 = "*"
+pillow = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.11"
